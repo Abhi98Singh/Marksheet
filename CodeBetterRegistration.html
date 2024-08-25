@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Better Registration Form</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://media.licdn.com/dms/image/C560BAQHkvrETBjuAHg/company-logo_200_200/0/1631349559752?e=2147483647&v=beta&t=6cH67RCR5nCGzBVxn0G2ToQbMrSCHdZeh-CdyeKXKNk">
+    <style>
+        .form {
+            display: flex;
+            justify-content: center;
+            width: 96vw;
+        }
+
+        form {
+            /* margin-top: 20px; */
+            background-color: #ffe9ec;
+            padding: 20px 300px 40px 300px;
+            border: 6px solid #6a6774;
+            ;
+        }
+
+        h2 {
+            text-align: center;
+            box-sizing: border-box;
+            padding: 3px 0;
+            margin-top: 40px;
+            background-color: #494949;
+            color:white;
+            border: 3px solid #c73338;
+        }
+    
+
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+
+        .browsePhoto {
+            width: 165px;
+            cursor: pointer;
+        }
+        label{
+            font-family: inherit;
+            font-size: 20px;
+            color: #535158;
+        }
+        td{
+            padding: 12px 2px;
+        }
+        .inputText{
+            padding: 4px 100px 4px 0;
+            font-size: inherit;
+            font-family: inherit;
+            box-sizing: border-box;
+            border: 1px solid #535158;
+        }
+        #course
+        {
+            padding: 8px 0;
+        }
+        button {
+            background-color: #fc4045;
+            color: white;
+            padding: 10px 50px;
+            border: none;
+            font-size: 17px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            line-height: inherit;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        button:hover
+        {
+            background-color: #9f292d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="#" method="post" autocomplete="on">
+            <div class="logo"><img src="https://codebetter.in/images/companyLogo/navLogo.svg"
+                alt=""></div>
+            
+            <h2>Registration Form</h2>
+            <br><br>
+            <table>
+                <tr>
+                    <td><label for="img">Student Photo : </label></td>
+                    <td><input type="file" value="Select a Photo" id="myfile" name="myfile" class="browsePhoto"><span>( Less than 5 Mb )</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Student Name : </label>
+                    </td>
+                    <td><input type="text" class="inputText" id="name" name="name" autofocus pattern="[A-Z][A-Za-z]{3,} [A-Za-z]{3,}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Fname">Father's Name : </label>
+                    </td>
+                    <td><input type="text" class="inputText" id="Fname" name="fname" pattern="[A-Za-z]{3,} [A-Za-z]{3,}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Gender : </label>
+                    </td>
+                    <td><input type="radio" name="gender" id="m"><label for="m">Male</label> <input type="radio" name="gender" id="f"><label
+                            for="f">Female</label><input type="radio" name="gender" id="o"><label
+                            for="o">Other</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="dob">Date of Birth : </label>
+                    </td>
+                    <td><input type="date" id="dob" min="2009-01-01">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="contact">Contact no. : </label></td>
+                    <td><input type="text" class="inputText" id="contact" name="phone" pattern="[0-9]{10}" required></td>
+                  </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email : </label>
+                    </td>
+                    <td><input type="email" id="email" class="inputText" name="email" required>
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <label for="address">Address : </label>
+                    </td>
+                    <td><input type="text" class="inputText" id="address">
+                    </td>
+                </tr>
+
+               
+                
+               
+                <tr>
+                    <td>
+                        <label for="course">Course Name : </label>
+                    </td>
+                    <td>
+                        <select name="course" id="course">
+                            <option value="react">React Node Fullstack Development (MERN)</option>
+                            <option value="ang">Angular Node Fullstack Development (MEAN)</option>
+                            <option value="phthon">Python Programming</option>
+                            <option value="java">Java Spring Backend
+                                Development</option>
+                                <option value="ai">Artificial Intelligence and Machine Learning</option>
+                                <option value="flut">Flutter Mobile App
+                                    Development</option>
+                                    <option value="test">Software Testing</option>
+                        </select>
+                    </td>
+                </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                    <button type="submit">Register</button>
+                </td>
+            </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
