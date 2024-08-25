@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title title="Marksheet : Report Card">Marksheet</title>
+    <link rel="icon" href="logo1.jpg" type="image/x-icon">
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20220315/ourmid/pngtree-marksheet-list-business-concept-vector-png-image_35712064.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+    body
+    {
+      background-color: #fbe9b9;
+    }
+
+    .headMenu
+    {
+      background-color: #dccda3;
+    }
+    .studentDetailsContainer
+    {
+      border: 2px solid rgb(182, 181, 181);
+    }
+    #invalid
+    {
+      display: none;
+    }
+
+</style>
+
+</head>
+<body>
+
+      <!-- Header -->
+        <div class="container-fluid p-3 headMenu">
+          <div class="text-center h4 text-secondary">Marksheet</div>
+          </div>
+
+          <div class="alert alert-danger alert-dismissible fade show text-center" id="invalid" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <strong>Please Fill All The Inputs..!!!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" id="alrtclosebtn"></button>
+          </div>
+    
+
+
+    <!-- Student Details Container -->
+    <div class="container mt-5 pt-3 pb-5 studentDetailsContainer">
+   
+      <fieldset>
+        <legend class="form-Heading">Student's Details</legend>
+  
+
+
+        <form>
+           <!-- Student Details Box -->
+        <div class="container studentDetailsBox">
+
+         <!-- Name and Class  -->
+        <div class="row name-class mb-4">
+
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <label for="studentName" class="form-label">Name</label>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="studentName" placeholder="Name" required>
+              <label for="studentName">Name</label>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <label for="StudentClass" class="form-label">Class</label>
+          <div class="form-floating">
+            <select class="form-select" id="StudentClass" aria-label="Floating label select example" required>
+              <option value="I">I</option>
+              <option value="II">II</option>
+              <option value="III">III</option>
+              <option value="IV">IV</option>
+              <option value="V">V</option>
+              <option value="VI" selected>VI</option>
+              <option value="VII">VII</option>
+              <option value="VIII">VIII</option>
+              <option value="IX">IX</option>
+              <option value="X">X</option>
+              <option value="XI">XI</option>
+              <option value="XII">XII</option>
+            </select>
+            <label for="floatingSelect">Select your Class</label>
+          </div>
+          </div>
+
+          </div>
+
+
+
+          <!-- Subjects Marks -->
+          <label for="subj" class="form-label">Enter your Subject Marks</label>
+          <div class="row subjMarks mb-4">
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-2">          
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control hindi" id="subjHindi" placeholder="Hindi" required>
+              <label for="subjHindi">Hindi</label>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control eng" id="subjEng" placeholder="English" required>
+              <label for="subjEng">English</label>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control maths" id="subjMaths" placeholder="Maths" required>
+              <label for="subjMaths">Maths</label>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-2">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control science" id="subjScience" placeholder="Science" required>
+              <label for="subjScience">Science</label>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+
+      <!-- Buttons -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#displayResult" id="getResultBtn">Get Result</button>
+          <input class="btn btn-primary" type="reset" value="Reset" id="resett">
+        </div>
+      
+   
+
+      </form>
+    </fieldset>
+
+  </div>
+
+  
+  <!-- Popup Modal for Report Card -->
+  <div class="modal fade" id="displayResult" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" id="mod">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Report Card</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         
+          <table class="table table-bordered border-secondary table-hover">
+            <tbody>
+              
+              <tr>
+                <th class="table-warning">Name</th>
+                <td><input type="text" readonly class="form-control" id="nameData"></td>
+              </tr>
+
+              <tr>
+                <th class="table-warning">Class</th>
+                <td><input type="text" readonly class="form-control" id="classData"></td>
+              </tr>
+
+              <tr>
+                <th class="table-warning">Total Marks</th>
+                <td><input type="text" readonly class="form-control" id="totalMarksData"></td>
+              </tr>
+
+              <tr>
+                <th class="table-warning">Percentage</th>
+                <td><input type="text" readonly class="form-control" id="percentData"></td>
+              </tr>
+
+              <tr>
+                <th class="table-warning">Grade</th>
+                <td><input type="text" readonly class="form-control" id="gradeData"></td>
+              </tr>
+
+              <tr>
+                <th class="table-warning">Remarks</th>
+                <td><input type="text" readonly class="form-control" id="remarksData"></td>
+              </tr>
+            
+          
+            </tbody>
+          
+          
+          </table>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
+
+
+    <script>
+
+
+      document.getElementById('getResultBtn').addEventListener('click', function(){
+
+       let name = document.getElementById('studentName').value;
+
+       let classOfStudent =  document.getElementById('StudentClass').value;
+
+       let hindiSubj = +document.getElementById('subjHindi').value;
+       let engSubj = +document.getElementById('subjEng').value;
+       let mathsSubj = +document.getElementById('subjMaths').value;
+       let scienceSubj = +document.getElementById('subjScience').value;
+
+        let totalMarks, studentMarks, percent, grade, remark;
+
+       totalMarks = 400;
+       studentMarks = hindiSubj + engSubj + mathsSubj + scienceSubj;
+
+       percent = (studentMarks/totalMarks)*100;
+
+
+       if(percent >= 75)
+       {
+        grade = 'A';
+        remark = "First Divison"
+       }
+       else if(percent < 75 && percent >= 60)
+       {
+        grade = 'B';
+        remark = "Second Divison"
+       }
+       else if(percent < 60)
+       {
+        grade = 'C';
+        remark = "Third Divison"
+       }
+
+       if(name == "" || hindiSubj == "" || engSubj == "" || mathsSubj == "" || scienceSubj == "")
+       {
+        // alert("Input is Empty")
+
+        document.getElementById('invalid').style.display='block';
+
+        document.getElementById('getResultBtn').setAttribute = disabled;
+        document.getElementById('getResultBtn').disabled = true;
+         document.getElementById('displayResult').style.display = 'none';
+
+        // closeModal();
+     
+
+
+       }
+
+
+       document.getElementById('nameData').value = name;
+
+       document.getElementById('classData').value = classOfStudent;
+
+       document.getElementById('totalMarksData').value = `${studentMarks}/${totalMarks}`;
+
+       document.getElementById('percentData').value = `${percent}%`;
+
+       document.getElementById('gradeData').value = grade;
+
+       document.getElementById('remarksData').value = remark;
+
+
+       
+
+
+      })
+
+      // closeModal()
+      //  {
+      //   document.getElementById('closeModal').click();
+      //  }
+
+      document.getElementById('resett').addEventListener('click', function(){
+        window.location.reload();
+      })
+
+      document.getElementById('alrtclosebtn').addEventListener('click', function(){
+        window.location.reload();
+      })
+
+      
+
+      
+
+
+
+
+
+    </script>
+
+</body>
+</html>
